@@ -1,4 +1,5 @@
 .env
 update.bat
 run.bat
-notes.txt
+notes
+__pycache__
