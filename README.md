@@ -1,4 +1,4 @@
-![Wavelength Logo](path/to/your-logo.png)
+![Wavelength Logo](logo.png)
 
 # 🎧 Wavelength – Natural Language Music Recommendations
 
