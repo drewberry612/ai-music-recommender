@@ -1,5 +1,5 @@
 import streamlit as st
-from helper import run_prompt
+from frontend.helper import run_prompt
 
 # ---- APP CONFIG ----
 st.set_page_config(

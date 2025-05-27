@@ -3,3 +3,4 @@ update.bat
 run.bat
 notes
 __pycache__
+backend/notes.txt
