@@ -1,4 +1,4 @@
-![Wavelength Logo](logo.png)
+![Wavelength Logo](frontend/logo.png)
 
 # 🎧 Wavelength – Natural Language Music Recommendations
 
