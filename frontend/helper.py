@@ -1,11 +1,19 @@
 import streamlit as st
 import requests
+from dotenv import load_dotenv
+import os
+import json
+import time
+
+load_dotenv()
+
+SLEEP = 0  # Global sleep duration in seconds
 
 DOMAIN = "http://<your_local_ip>:<your_port>"
 API_URL = "http://ws.audioscrobbler.com/2.0/"
-API_KEY = "your_api_key_here"
-PROMPT_ERROR = "Sorry, I couldn't understand your request. Please try phrasing it differently!"
-API_ERROR = "Sorry, something went wrong while finding recommendations. Please try again later."
+API_KEY = os.getenv("API_KEY")
+PROMPT_ERROR = "Sorry, I couldn't understand your request. Please try phrasing it differently."
+API_ERROR = "Sorry, something went wrong while obtaining recommendations. Please try again later."
 REFINE_ERROR = "Sorry, something went wrong while finalising your recommendations. Please try again."
 
 def validate_response(response, expected_type):
@@ -49,11 +57,12 @@ def interpret_prompt(prompt):
     query = (
         f"Given the prompt '{prompt}', extract the key information and return it in this exact structured format: "
         "{"
-        "'artist': artist name(s), "
-        "'genre': genre name(s), "
-        "'tags': [tag1, tag2, ...]"
+        "'artist': [artist1, artist2, ...], "
+        "'genre': [genre1, genre2, ...], "
+        "'track': [track1, track2, ...], "
+        "'tag': [tag1, tag2, ...]"
         "}. "
-        "If any information is missing, use None for a missing value or an empty list for tags. "
+        "If any information is missing, use an empty list. "
         "Return only the structure, no additional commentary or explanation."
     )
 
@@ -113,6 +122,8 @@ def get_tracks_for_artist(artist_name, limit=3):
     response = requests.get(API_URL, params=params)
     data = validate_lastfm_response(response, expected_keys=['toptracks'])
 
+    print(f"\nTracks for artist {artist_name}: {data}")
+
     tracks = []
     if 'toptracks' in data:
         for track in data['toptracks']['track']:
@@ -121,12 +132,15 @@ def get_tracks_for_artist(artist_name, limit=3):
 
 def get_recommended_tracks_by_artist(artist_name):
     similar_artists = get_similar_artists(artist_name)
+    print(f"\nSimilar artists for {artist_name}: {similar_artists}")
+    time.sleep(SLEEP)
     all_tracks = []
 
     for artist in similar_artists:
         tracks = get_tracks_for_artist(artist)
         for track in tracks:
-            all_tracks.append((artist, track))  # (artist name, track name)
+            all_tracks.append((artist, track))
+        time.sleep(SLEEP)
     
     return all_tracks
 
@@ -141,10 +155,32 @@ def get_recommended_tracks_by_tag(tag):
     response = requests.get(API_URL, params=params)
     data = validate_lastfm_response(response, expected_keys=['tracks'])
 
+    print(f"\nTracks for tag {tag}: {data}")
+
     tracks = []
     if 'tracks' in data:
         for track in data['tracks']['track']:
-            tracks.append((track['artist']['name'], track['name']))  # (tag name, track name)
+            tracks.append((track['artist']['name'], track['name']))
+    
+    return tracks
+
+def get_recommended_tracks_by_genre(genre):
+    params = {
+        'method': 'tag.gettoptracks',
+        'tag': genre,
+        'api_key': API_KEY,
+        'format': 'json',
+        'limit': 5
+    }
+    response = requests.get(API_URL, params=params)
+    data = validate_lastfm_response(response, expected_keys=['tracks'])
+
+    print(f"\nTracks for genre {genre}: {data}")
+
+    tracks = []
+    if 'tracks' in data:
+        for track in data['tracks']['track']:
+            tracks.append((track['artist']['name'], track['name']))
     
     return tracks
 
@@ -159,12 +195,44 @@ def get_recommended_tracks_by_track(track_name):
     response = requests.get(API_URL, params=params)
     data = validate_lastfm_response(response, expected_keys=['similartracks'])
 
+    print(f"Tracks similar to {track_name}: {data}")
+
     tracks = []
     if 'similartracks' in data:
         for track in data['similartracks']['track']:
-            tracks.append((track['artist']['name'], track['name']))  # (artist name, track name)
+            tracks.append((track['artist']['name'], track['name']))
     
     return tracks
+
+def get_tags_for_tracks(tracks, max_tags=5):
+    """
+    Given a list of (artist, track) tuples, return a list of [artist, track, tags] entries.
+    Each tags list is limited to `max_tags` items.
+    """
+    results = []
+
+    for artist, track in tracks:
+        params = {
+            'method': 'track.gettoptags',
+            'artist': artist,
+            'track': track,
+            'api_key': API_KEY,
+            'format': 'json'
+        }
+        response = requests.get(API_URL, params=params)
+        data = validate_lastfm_response(response, expected_keys=['toptags'])
+
+        print(f"\nTags for {artist} - {track}: {data}")
+
+        tags = []
+        if 'toptags' in data and 'tag' in data['toptags']:
+            for tag in data['toptags']['tag'][:max_tags]:
+                if isinstance(tag, dict) and 'name' in tag:
+                    tags.append(tag['name'])
+
+        results.append([artist, track, tags])
+
+    return results
 
 def get_recommendations(parsed_prompt):
     recommendations = []
@@ -176,10 +244,19 @@ def get_recommendations(parsed_prompt):
     for tag in parsed_prompt['tag']:
         if tag:
             recommendations.extend(get_recommended_tracks_by_tag(tag))
+        time.sleep(SLEEP)  # To avoid hitting API rate limits
+    
+    for genre in parsed_prompt.get('genre', []):
+        if genre:
+            recommendations.extend(get_recommended_tracks_by_genre(genre))
+        time.sleep(SLEEP)
 
-    for track in parsed_prompt['track']:
+    for track in parsed_prompt.get('track', []):
         if track:
             recommendations.extend(get_recommended_tracks_by_track(track))
+        time.sleep(SLEEP)
+
+    recommendations = get_tags_for_tracks(recommendations)
 
     return recommendations
 
@@ -202,10 +279,22 @@ def refine_recommendations(prompt, recommendations):
     return valid_response
 
 def run_prompt(prompt):
-    parsed_prompt = interpret_prompt(prompt)
+    start = time.time()
+
+    #parsed_prompt = interpret_prompt(prompt)
+    parsed_prompt = json.loads(prompt) # Testing with direct prompt for simplicity
 
     recommendations = get_recommendations(parsed_prompt)
 
-    final_recommendations = refine_recommendations(recommendations, prompt)
+    # final_recommendations = refine_recommendations(recommendations, prompt)
 
-    return final_recommendations
+    end = time.time()
+    elapsed = end - start
+    print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
+
+    #return final_recommendations
+    return recommendations # Testing with direct recommendations for simplicity
+
+
+# Extreme example prompt for testing
+# {"artist": ["Radiohead", "Portishead", "Massive Attack"],"genre": ["Alternative Rock", "Trip-Hop", "Electronica"],"tag": ["moody", "experimental", "UK", "1990s", "layered"],"tracks": ["Teardrop", "Karma Police", "Unfinished Sympathy"]}

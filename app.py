@@ -21,22 +21,35 @@ if "loading" not in st.session_state:
 # change this to ping the model to check that it is available
 
 # ---- SIDEBAR ----
+MAX_CHARS = 300
+
 with st.sidebar:
     st.title(" 🎶 Wavelength")
     st.write(" AI-powered music recommendations")
-    
+
     prompt = st.text_area(
         "Tell Wavelength what kind of vibe you're after:",
         placeholder="E.g. mellow acoustic songs for a rainy evening, or energetic hip-hop like Kendrick Lamar",
-        height=150
+        height=235
     )
 
-    if st.button("Submit"):
-        if prompt.strip() != "":
+    if len(prompt) > MAX_CHARS:
+        st.warning(f"Prompt is too long. Please keep it under {MAX_CHARS} characters.")
+        can_submit = False
+    else:
+        can_submit = True
+
+    submit_clicked = st.button("Submit")  # Call once and save
+
+    if submit_clicked:
+        if not can_submit:
+            st.warning(f"Please shorten your prompt to under {MAX_CHARS} characters before submitting.")
+        elif prompt.strip() == "":
+            st.warning("Please enter a valid input.")
+        else:
             st.session_state.submitted = True
             st.session_state.loading = True
-        else:
-            st.warning("Please enter a valid input.")
+
 
 # ---- MAIN CONTENT ----
 text1 = st.empty()
