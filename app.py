@@ -75,8 +75,8 @@ else:
     with st.spinner("Fetching recommendations..."):
         st.session_state.loading = False
 
-        # Get recommendations from Spotify API
-        recommendations = run_prompt(prompt)
+        # Get recommendations from Last FM API
+        recommendations, metadata = run_prompt(prompt)
         
         # Display recommendations
         if isinstance(recommendations, list):

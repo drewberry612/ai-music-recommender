@@ -16,13 +16,16 @@ PROMPT_ERROR = "Sorry, I couldn't understand your request. Please try phrasing i
 API_ERROR = "Sorry, something went wrong while obtaining recommendations. Please try again later."
 REFINE_ERROR = "Sorry, something went wrong while finalising your recommendations. Please try again."
 
+# Dictionary of all recommendation metadata
+RECOMMENDATION_METADATA = {}
+
 def validate_response(response, expected_type):
     try:
         if response.status_code == 200:
             model_response = response.json()
 
             if expected_type == "dict":
-                if isinstance(model_response, dict) and 'artist' in model_response and 'genre' in model_response and 'tags' in model_response:
+                if isinstance(model_response, dict) and 'artist' in model_response and 'tags' in model_response:
                     return model_response
                 else:
                     st.error("Error: Response structure is incorrect for prompt interpretation.")
@@ -47,36 +50,34 @@ def validate_response(response, expected_type):
         st.error("Error: Response is not valid JSON.")
         st.stop()
 
-def safe_split(value):
-    # Function to safely split the strings and handle cases where the value is empty or null
-    if value and isinstance(value, str):  # Check if the value is not null and is a string
-        return [item.strip() for item in value.split(',')]  # Split and strip spaces
-    return []  # Return an empty list if the value is null or not a string
-
 def interpret_prompt(prompt):
     query = (
         f"Given the prompt '{prompt}', extract the key information and return it in this exact structured format: "
         "{"
         "'artist': [artist1, artist2, ...], "
-        "'genre': [genre1, genre2, ...], "
-        "'track': [track1, track2, ...], "
-        "'tag': [tag1, tag2, ...]"
+        "'tags': [tag1, tag2, ...]"
         "}. "
         "If any information is missing, use an empty list. "
+        "Include any genres you find in the prompt as tags in the 'tags' field. "
         "Return only the structure, no additional commentary or explanation."
     )
-
+    
     # Send the request to the model
     payload = {"query": query}
     response = requests.post(DOMAIN, json=payload)
 
     valid_response = validate_response(response, expected_type="dict")
 
-    # Apply the safe_split function to the artist and genre fields
-    valid_response['artist'] = safe_split(valid_response.get('artist', ''))
-    valid_response['genre'] = safe_split(valid_response.get('genre', ''))
-
     return valid_response
+
+def get_album_cover_url(track):
+    images = track.get('image', [])
+    # Try to get the largest available image
+    for size in ['extralarge', 'large', 'medium', 'small']:
+        for img in images:
+            if img.get('size') == size and img.get('#text'):
+                return img['#text']
+    return ''
 
 def validate_lastfm_response(response, expected_keys):
     try:
@@ -122,12 +123,21 @@ def get_tracks_for_artist(artist_name, limit=3):
     response = requests.get(API_URL, params=params)
     data = validate_lastfm_response(response, expected_keys=['toptracks'])
 
-    print(f"\nTracks for artist {artist_name}: {data}")
-
     tracks = []
     if 'toptracks' in data:
         for track in data['toptracks']['track']:
-            tracks.append(track['name'])
+            tracks.append({
+                "track": track['name'],
+                "artist": track['artist']['name'],
+                "tags": []
+            })
+
+            RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
+                "tags": [],
+                "album_cover_url": get_album_cover_url(track),
+                "track_link_url": track.get('url', '')
+            }
+
     return tracks
 
 def get_recommended_tracks_by_artist(artist_name):
@@ -137,9 +147,7 @@ def get_recommended_tracks_by_artist(artist_name):
     all_tracks = []
 
     for artist in similar_artists:
-        tracks = get_tracks_for_artist(artist)
-        for track in tracks:
-            all_tracks.append((artist, track))
+        all_tracks.extend(get_tracks_for_artist(artist))
         time.sleep(SLEEP)
     
     return all_tracks
@@ -155,63 +163,29 @@ def get_recommended_tracks_by_tag(tag):
     response = requests.get(API_URL, params=params)
     data = validate_lastfm_response(response, expected_keys=['tracks'])
 
-    print(f"\nTracks for tag {tag}: {data}")
-
     tracks = []
     if 'tracks' in data:
         for track in data['tracks']['track']:
-            tracks.append((track['artist']['name'], track['name']))
+            tracks.append({
+                "track": track['name'],
+                "artist": track['artist']['name'],
+                "tags": []
+            })
+
+            RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
+                "tags": [],
+                "album_cover_url": get_album_cover_url(track),
+                "track_link_url": track.get('url', '')
+            }
     
     return tracks
 
-def get_recommended_tracks_by_genre(genre):
-    params = {
-        'method': 'tag.gettoptracks',
-        'tag': genre,
-        'api_key': API_KEY,
-        'format': 'json',
-        'limit': 5
-    }
-    response = requests.get(API_URL, params=params)
-    data = validate_lastfm_response(response, expected_keys=['tracks'])
-
-    print(f"\nTracks for genre {genre}: {data}")
-
-    tracks = []
-    if 'tracks' in data:
-        for track in data['tracks']['track']:
-            tracks.append((track['artist']['name'], track['name']))
-    
-    return tracks
-
-def get_recommended_tracks_by_track(track_name):
-    params = {
-        'method': 'track.getsimilar',
-        'track': track_name,
-        'api_key': API_KEY,
-        'format': 'json',
-        'limit': 5
-    }
-    response = requests.get(API_URL, params=params)
-    data = validate_lastfm_response(response, expected_keys=['similartracks'])
-
-    print(f"Tracks similar to {track_name}: {data}")
-
-    tracks = []
-    if 'similartracks' in data:
-        for track in data['similartracks']['track']:
-            tracks.append((track['artist']['name'], track['name']))
-    
-    return tracks
-
-def get_tags_for_tracks(tracks, max_tags=5):
-    """
-    Given a list of (artist, track) tuples, return a list of [artist, track, tags] entries.
-    Each tags list is limited to `max_tags` items.
-    """
+def get_tags_for_tracks(tracks, max_tags=10):
     results = []
 
-    for artist, track in tracks:
+    for track_info in tracks:
+        artist = track_info['artist']
+        track = track_info['track']
         params = {
             'method': 'track.gettoptags',
             'artist': artist,
@@ -222,39 +196,45 @@ def get_tags_for_tracks(tracks, max_tags=5):
         response = requests.get(API_URL, params=params)
         data = validate_lastfm_response(response, expected_keys=['toptags'])
 
-        print(f"\nTags for {artist} - {track}: {data}")
-
         tags = []
         if 'toptags' in data and 'tag' in data['toptags']:
             for tag in data['toptags']['tag'][:max_tags]:
                 if isinstance(tag, dict) and 'name' in tag:
                     tags.append(tag['name'])
 
-        results.append([artist, track, tags])
+        track_info['tags'] = tags
+        RECOMMENDATION_METADATA[(track, artist)]['tags'] = tags
+
+        results.append(track_info)
 
     return results
+
+def remove_duplicates(recommendations):
+    seen = set()
+    result = []
+    for rec in recommendations:
+        key = (rec['track'], rec['artist'])
+        if key not in seen:
+            seen.add(key)
+            result.append(rec)
+    return result
 
 def get_recommendations(parsed_prompt):
     recommendations = []
 
-    for artist in parsed_prompt['artist']:
-        if artist:
-            recommendations.extend(get_recommended_tracks_by_artist(artist))
+    # Map keys to their corresponding functions
+    key_func_map = {
+        'artist': get_recommended_tracks_by_artist,
+        'tags': get_recommended_tracks_by_tag,
+    }
 
-    for tag in parsed_prompt['tag']:
-        if tag:
-            recommendations.extend(get_recommended_tracks_by_tag(tag))
-        time.sleep(SLEEP)  # To avoid hitting API rate limits
-    
-    for genre in parsed_prompt.get('genre', []):
-        if genre:
-            recommendations.extend(get_recommended_tracks_by_genre(genre))
-        time.sleep(SLEEP)
+    for key, func in key_func_map.items():
+        for item in parsed_prompt.get(key, []):
+            if item:
+                recommendations.extend(func(item))
+            time.sleep(SLEEP)  # To avoid hitting API rate limits
 
-    for track in parsed_prompt.get('track', []):
-        if track:
-            recommendations.extend(get_recommended_tracks_by_track(track))
-        time.sleep(SLEEP)
+    recommendations = remove_duplicates(recommendations)
 
     recommendations = get_tags_for_tracks(recommendations)
 
@@ -264,9 +244,9 @@ def refine_recommendations(prompt, recommendations):
     query = (
         f"Given the prompt '{prompt}' and the following list of recommendations:\n"
         f"{recommendations}\n\n"
-        "Return the recommendations reordered by relevance to the prompt, removing any duplicates or irrelevant tracks. "
+        "Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. "
         "Return the final list in plain JSON array format, like this: "
-        "['Track 1 - Artist 1', 'Track 2 - Artist 2', ...]. "
+        "[('track1', 'artist1'), ('track2', 'artist2'), ...]. "
         "Do not include any commentary, explanations, or text outside the JSON array."
     )
 
@@ -286,15 +266,18 @@ def run_prompt(prompt):
 
     recommendations = get_recommendations(parsed_prompt)
 
-    # final_recommendations = refine_recommendations(recommendations, prompt)
+    #recommendations = refine_recommendations(recommendations, parsed_prompt)
 
     end = time.time()
     elapsed = end - start
     print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
 
-    #return final_recommendations
-    return recommendations # Testing with direct recommendations for simplicity
+    print(f"\nMetadata: {RECOMMENDATION_METADATA}")
+
+    return recommendations, RECOMMENDATION_METADATA
 
 
 # Extreme example prompt for testing
-# {"artist": ["Radiohead", "Portishead", "Massive Attack"],"genre": ["Alternative Rock", "Trip-Hop", "Electronica"],"tag": ["moody", "experimental", "UK", "1990s", "layered"],"tracks": ["Teardrop", "Karma Police", "Unfinished Sympathy"]}
+# {"artist": ["Radiohead", "Portishead", "Massive Attack"], "tags": ["moody", "experimental", "UK", "1990s", "layered", "Alternative Rock", "Trip-Hop", "Electronica"]}
+
+# {"artist": [], "tags": ["Alternative Rock"]}
