@@ -23,29 +23,24 @@ def validate_response(response, expected_type):
     try:
         if response.status_code == 200:
             model_response = response.json()
-
             if expected_type == "dict":
                 if isinstance(model_response, dict) and 'artist' in model_response and 'tags' in model_response:
                     return model_response
                 else:
                     st.error("Error: Response structure is incorrect for prompt interpretation.")
                     st.stop()
-
             elif expected_type == "list":
                 if isinstance(model_response, list):
                     return model_response
                 else:
                     st.error("Error: Response structure is incorrect for recommendations refinement.")
                     st.stop()
-
             else:
                 st.error(f"Error: Unknown expected response type '{expected_type}'.")
                 st.stop()
-
         else:
             st.error(f"Error: Unable to process the request. Status code: {response.status_code}")
             st.stop()
-
     except ValueError:
         st.error("Error: Response is not valid JSON.")
         st.stop()
@@ -71,6 +66,7 @@ def interpret_prompt(prompt):
     return valid_response
 
 def get_album_cover_url(track):
+    # This needs testing properly
     images = track.get('image', [])
     # Try to get the largest available image
     for size in ['extralarge', 'large', 'medium', 'small']:
