@@ -1,7 +1,7 @@
 import httpx
 
 OLLAMA_URL = "http://localhost:11434/api/generate"  # Default Ollama endpoint
-MODEL_NAME = "llama3"  # Adjust based on your setup
+MODEL_NAME = "mistral"  # Adjust based on your setup
 
 async def query_ollama(prompt: str) -> str:
     payload = {

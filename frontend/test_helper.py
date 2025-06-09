@@ -3,8 +3,7 @@ import json
 import os
 import time
 
-# Set this to the IP and port of your backend server (e.g., "http://192.168.1.100:8001")
-BACKEND_URL = os.getenv("BACKEND_URL", "http://192.168.1.142:8001")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://192.168.1.142:8000")
 
 def test_root():
     url = f"{BACKEND_URL}/"
