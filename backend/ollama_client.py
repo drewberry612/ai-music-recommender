@@ -1,7 +1,7 @@
 import httpx
 
 OLLAMA_URL = "http://localhost:11434/api/generate"  # Default Ollama endpoint
-MODEL_NAME = "mistral"  # Adjust based on your setup
+MODEL_NAME = "mistral:latest"  # Adjust based on your setup
 
 async def query_ollama(prompt: str) -> str:
     payload = {
@@ -9,7 +9,8 @@ async def query_ollama(prompt: str) -> str:
         "prompt": prompt,
         "stream": False
     }
-    async with httpx.AsyncClient() as client:
+    timeout = httpx.Timeout(40.0)
+    async with httpx.AsyncClient(timeout=timeout) as client:
         response = await client.post(OLLAMA_URL, json=payload)
         response.raise_for_status()
         return response.json().get("response", "")
