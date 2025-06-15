@@ -122,19 +122,27 @@ def get_tracks_for_artist(artist_name, limit=3):
     tracks = []
     if 'toptracks' in data:
         for track in data['toptracks']['track']:
-            tracks.append({
+            append_track_info(tracks, track)
+
+    return tracks
+
+def append_track_info(tracks, track):
+    tracks.append({
                 "track": track['name'],
                 "artist": track['artist']['name'],
                 "tags": []
             })
 
-            RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
+    RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
                 "tags": [],
                 "album_cover_url": get_album_cover_url(track),
-                "track_link_url": track.get('url', '')
+                "track_link_url": track.get('url', ''),
+                # Extra metadata from notes.md
+                "artist_url": track.get('artist', {}).get('url', ''),
+                "track_url": track.get('url', ''),
+                "duration": track.get('duration', ''),
+                "mbid": track.get('mbid', '')
             }
-
-    return tracks
 
 def get_recommended_tracks_by_artist(artist_name):
     similar_artists = get_similar_artists(artist_name)
@@ -162,17 +170,7 @@ def get_recommended_tracks_by_tag(tag):
     tracks = []
     if 'tracks' in data:
         for track in data['tracks']['track']:
-            tracks.append({
-                "track": track['name'],
-                "artist": track['artist']['name'],
-                "tags": []
-            })
-
-            RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
-                "tags": [],
-                "album_cover_url": get_album_cover_url(track),
-                "track_link_url": track.get('url', '')
-            }
+            append_track_info(tracks, track)
     
     return tracks
 
