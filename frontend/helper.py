@@ -7,7 +7,7 @@ import time
 
 load_dotenv()
 
-SLEEP = 0  # Global sleep duration in seconds
+SLEEP = 1  # Global sleep duration in seconds
 
 DOMAIN = "http://<your_local_ip>:<your_port>"
 API_URL = "http://ws.audioscrobbler.com/2.0/"
@@ -133,13 +133,12 @@ def append_track_info(tracks, track):
                 "tags": []
             })
 
-    RECOMMENDATION_METADATA[(track['name'], track['artist']['name'])] = {
+    key = (track['name'], track['artist']['name'])
+    RECOMMENDATION_METADATA[key] = {
                 "tags": [],
                 "album_cover_url": get_album_cover_url(track),
-                "track_link_url": track.get('url', ''),
-                # Extra metadata from notes.md
-                "artist_url": track.get('artist', {}).get('url', ''),
                 "track_url": track.get('url', ''),
+                "artist_url": track.get('artist', {}).get('url', ''),
                 "duration": track.get('duration', ''),
                 "mbid": track.get('mbid', '')
             }
@@ -266,9 +265,16 @@ def run_prompt(prompt):
     elapsed = end - start
     print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
 
-    print(f"\nMetadata: {RECOMMENDATION_METADATA}")
-
     return recommendations, RECOMMENDATION_METADATA
+
+    # Example recommendations array and empty metadata dictionary
+    # example_recommendations = [
+    #     {"track": "Karma Police", "artist": "Radiohead", "tags": ["Alternative Rock", "90s"]},
+    #     {"track": "Teardrop", "artist": "Massive Attack", "tags": ["Trip-Hop", "Electronica"]},
+    #     {"track": "Glory Box", "artist": "Portishead", "tags": ["Trip-Hop", "Moody"]}
+    # ]
+    # example_metadata = {}
+    # return example_recommendations, example_metadata
 
 
 # Extreme example prompt for testing
