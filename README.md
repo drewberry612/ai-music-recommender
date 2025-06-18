@@ -1,6 +1,6 @@
 ![Wavelength Logo](frontend/logo.png)
 
-# 🎧 Wavelength – Natural Language Music Recommendations
+# Natural Language Music Recommendations
 
 Wavelength is an AI-powered web app that generates tailored music recommendations from natural language prompts like:
 
