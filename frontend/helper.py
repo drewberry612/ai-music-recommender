@@ -2,14 +2,13 @@ import streamlit as st
 import requests
 from dotenv import load_dotenv
 import os
-import json
 import time
 
 load_dotenv()
 
 SLEEP = 1  # Global sleep duration in seconds
 
-DOMAIN = "http://<your_local_ip>:<your_port>"
+DOMAIN = os.get_env("DOMAIN")
 API_URL = "http://ws.audioscrobbler.com/2.0/"
 API_KEY = os.getenv("API_KEY")
 PROMPT_ERROR = "Sorry, I couldn't understand your request. Please try phrasing it differently."
@@ -251,33 +250,19 @@ def refine_recommendations(prompt, recommendations):
 
     return valid_response
 
-def run_prompt(prompt):
-    start = time.time()
-
-    #parsed_prompt = interpret_prompt(prompt)
-    parsed_prompt = json.loads(prompt) # Testing with direct prompt for simplicity
-
-    recommendations = get_recommendations(parsed_prompt)
-
-    #recommendations = refine_recommendations(recommendations, parsed_prompt)
-
-    end = time.time()
-    elapsed = end - start
-    print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
-
-    return recommendations, RECOMMENDATION_METADATA
-
-    # Example recommendations array and empty metadata dictionary
-    # example_recommendations = [
-    #     {"track": "Karma Police", "artist": "Radiohead", "tags": ["Alternative Rock", "90s"]},
-    #     {"track": "Teardrop", "artist": "Massive Attack", "tags": ["Trip-Hop", "Electronica"]},
-    #     {"track": "Glory Box", "artist": "Portishead", "tags": ["Trip-Hop", "Moody"]}
-    # ]
-    # example_metadata = {}
-    # return example_recommendations, example_metadata
-
+def get_metadata():
+    return RECOMMENDATION_METADATA
 
 # Extreme example prompt for testing
 # {"artist": ["Radiohead", "Portishead", "Massive Attack"], "tags": ["moody", "experimental", "UK", "1990s", "layered", "Alternative Rock", "Trip-Hop", "Electronica"]}
 
 # {"artist": [], "tags": ["Alternative Rock"]}
+
+# Example recommendations array and empty metadata dictionary
+# example_recommendations = [
+#     {"track": "Karma Police", "artist": "Radiohead", "tags": ["Alternative Rock", "90s"]},
+#     {"track": "Teardrop", "artist": "Massive Attack", "tags": ["Trip-Hop", "Electronica"]},
+#     {"track": "Glory Box", "artist": "Portishead", "tags": ["Trip-Hop", "Moody"]}
+# ]
+# example_metadata = {}
+# return example_recommendations, example_metadata

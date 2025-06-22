@@ -1,6 +1,8 @@
+import json
+import time
 import streamlit as st
-from frontend.helper import run_prompt
-from PIL import Image, ImageDraw
+from frontend.helper import get_metadata, get_recommendations, refine_recommendations, interpret_prompt
+from PIL import Image
 
 # ---- APP CONFIG ----
 st.set_page_config(
@@ -21,28 +23,10 @@ if "show_recommendations" not in st.session_state:
 
 # ---- SIDEBAR ----
 MAX_CHARS = 300
-MIN_CHARS = 10  # Set your desired minimum
+MIN_CHARS = 10
 
 with st.sidebar:
-    # Load and round the logo image
-    def add_rounded_corners(im, radius):
-        # Convert to RGBA
-        im = im.convert("RGBA")
-        # Create rounded mask
-        circle = Image.new('L', (radius * 2, radius * 2), 0)
-        draw = ImageDraw.Draw(circle)
-        draw.ellipse((0, 0, radius * 2, radius * 2), fill=255)
-        alpha = Image.new('L', im.size, 255)
-        w, h = im.size
-        alpha.paste(circle.crop((0, 0, radius, radius)), (0, 0))
-        alpha.paste(circle.crop((0, radius, radius, radius * 2)), (0, h - radius))
-        alpha.paste(circle.crop((radius, 0, radius * 2, radius)), (w - radius, 0))
-        alpha.paste(circle.crop((radius, radius, radius * 2, radius * 2)), (w - radius, h - radius))
-        im.putalpha(alpha)
-        return im
-
     logo = Image.open("frontend/logo.png")
-    logo = add_rounded_corners(logo, radius=30)
     st.image(logo, use_container_width=True)
 
     prompt = st.text_area(
@@ -51,13 +35,10 @@ with st.sidebar:
         height=235
     )
 
-    # Remove pre-submit validation and only validate on submit
-    can_submit = True
-
     submit_clicked = st.button("Submit")  # Call once and save
 
     if submit_clicked:
-        # Clear previous recommendations (moved from prompt clear logic)
+        # Clear previous recommendations
         if st.session_state.recommendation_containers:
             for container in st.session_state.recommendation_containers:
                 container.empty()
@@ -76,7 +57,6 @@ with st.sidebar:
             st.session_state.submitted = True
             st.session_state.loading = True
             st.session_state.show_recommendations = True
-
 
 # Custom CSS to set the sidebar background color
 st.markdown(
@@ -109,7 +89,35 @@ if st.session_state.show_recommendations:
         ph.empty()
     with st.spinner("Fetching recommendations..."):
         st.session_state.loading = False
-        recommendations, metadata = run_prompt(prompt)
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        
+        start = time.time()
+
+        status_text.text("Understanding your prompt...")
+        parsed_prompt = interpret_prompt(prompt)
+        parsed_prompt = json.loads(prompt) # Testing with direct prompt for simplicity
+
+        status_text.text("Fetching music data...")
+        progress_bar.progress(10)
+        recommendations = get_recommendations(parsed_prompt)
+
+        status_text.text("Finalizing recommendations...")
+        progress_bar.progress(50)
+        recommendations = refine_recommendations(recommendations, parsed_prompt)
+
+        status_text.text("Displaying recommendations now...")
+        progress_bar.progress(90)
+        time.sleep(1)
+        metadata = get_metadata()
+
+        end = time.time()
+        elapsed = end - start
+        print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
+
+        progress_bar.empty()
+        status_text.empty()
+        
         if isinstance(recommendations, list):
             for recommendation in recommendations:
                 container = st.empty()
