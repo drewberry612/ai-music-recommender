@@ -26,7 +26,7 @@ def setup_logger(name, filename):
 
     return logger
 
-prompt_logger = setup_logger("prompt_logger", "prompt.log")
+query_logger = setup_logger("query_logger", "query.log")
 health_logger = setup_logger("health_logger", "health.log")
 
 async def periodic_health_logger(interval_seconds: int = 300):

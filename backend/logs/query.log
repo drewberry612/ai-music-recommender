@@ -1,0 +1,355 @@
+[2025-06-25 15:58:43,761] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 15:58:51,906] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop']}
+[2025-06-25 16:00:12,763] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:00:16,237] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop']}
+[2025-06-25 16:02:38,382] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:02:42,046] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['Hip-hop']}
+[2025-06-25 16:03:32,912] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:03:37,064] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:07:08,821] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:07:13,005] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:09:51,094] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:09:55,787] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:10:10,168] INFO - Received query: Given the prompt '[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage', 'hip hop', 'sex', 'Incredible', 'joe', 'flow']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop', 'classic', '4 Stars', 'flow', 'banger', 'hardcore hip hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop', 'Hip-Hop', 'hip hop', 'pop rap', 'jazz rap', 'Conscious Hip Hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap', 'kali uchis', 'black metal', 'Hip-Hop', 'alternative hip hop', 'art pop']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap', 'soul', 'synth funk', 'tyler the creator', '2019', 'Hip-Hop']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul', 'west coast hip hop', 'industrial hip hop', 'rap', 'experimental hip-hop', 'alternative rnb']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance', 'electronic', 'Daft Punk', 'rnb', 'Stronger', 'pop']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap', 'heartless', 'pop', 'r&b', '00s', '2008']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb', 'MySpotigramBot', 'pop rap', '2007', '00s', 'flashing lights']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar', 'James Blake', 'jay rock', 'Hip-Hop', 'Hard', 'Grime']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played', 'tde', 'jay rock', '-1001819731063']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill', 'rock', 'classic', 'alternative rock', 'rap', 'Gangsta Rap']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop', 'kendrick lamar', 'west coast hip hop', '2021', 'Baby Keem', 'hip hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop', 'west coast', 'colours', 'food and drink', 'misogynistic', 'foodcore']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative', 'rap', 'synthpop', 'west coast', 'chillwave', 'cloud rap']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz', 'pop', 'indie', 'dance', 'alternative rock', 'trip-hop']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock', 'indie', 'alternative rock', 'hip hop', 'trip-hop', 'british']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop', 'outkast', 'rap', 'party', '00s', 'fun']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend', 'rock', 'catchy', 'fun', 'happy', 'Energetic']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock', 'power pop', 'vocal', 'pop', '80s', 'british']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s', 'r&b', '00s', '2004', 'hip hop', 'american']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb', 'dance', 'canada', 'dance pop', 'alt-pop', 'MySpotigramBot']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival', 'Post-punk revival', 'pop', 'alternative rock', 'new wave', 'pop punk']}]' and the following list of recommendations:
+{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:10:50,769] ERROR - Error querying model
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\main.py", line 32, in handle_query
+    response = await query_ollama(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\ollama_client.py", line 14, in query_ollama
+    response = await client.post(OLLAMA_URL, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-06-25 16:17:51,144] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:17:59,895] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:18:13,477] INFO - Received query: Given the prompt '[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage', 'hip hop', 'sex', 'Incredible', 'joe', 'flow']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop', 'classic', '4 Stars', 'flow', 'banger', 'hardcore hip hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop', 'Hip-Hop', 'hip hop', 'pop rap', 'jazz rap', 'Conscious Hip Hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap', 'kali uchis', 'black metal', 'Hip-Hop', 'alternative hip hop', 'art pop']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap', 'soul', 'synth funk', 'tyler the creator', '2019', 'Hip-Hop']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul', 'west coast hip hop', 'industrial hip hop', 'rap', 'experimental hip-hop', 'alternative rnb']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance', 'electronic', 'Daft Punk', 'rnb', 'Stronger', 'pop']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap', 'heartless', 'pop', 'r&b', '00s', '2008']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb', 'MySpotigramBot', 'pop rap', '2007', '00s', 'flashing lights']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar', 'James Blake', 'jay rock', 'Hip-Hop', 'Hard', 'Grime']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played', 'tde', 'jay rock', '-1001819731063']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill', 'rock', 'classic', 'alternative rock', 'rap', 'Gangsta Rap']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop', 'kendrick lamar', 'west coast hip hop', '2021', 'Baby Keem', 'hip hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop', 'west coast', 'colours', 'food and drink', 'misogynistic', 'foodcore']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative', 'rap', 'synthpop', 'west coast', 'chillwave', 'cloud rap']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz', 'pop', 'indie', 'dance', 'alternative rock', 'trip-hop']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock', 'indie', 'alternative rock', 'hip hop', 'trip-hop', 'british']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop', 'outkast', 'rap', 'party', '00s', 'fun']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend', 'rock', 'catchy', 'fun', 'happy', 'Energetic']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock', 'power pop', 'vocal', 'pop', '80s', 'british']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s', 'r&b', '00s', '2004', 'hip hop', 'american']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb', 'dance', 'canada', 'dance pop', 'alt-pop', 'MySpotigramBot']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival', 'Post-punk revival', 'pop', 'alternative rock', 'new wave', 'pop punk']}]' and the following list of recommendations:
+{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:19:14,083] ERROR - Error querying model
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\main.py", line 32, in handle_query
+    response = await query_ollama(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\ollama_client.py", line 14, in query_ollama
+    response = await client.post(OLLAMA_URL, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-06-25 16:19:45,745] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:19:59,550] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:20:13,385] INFO - Received query: Given the prompt '{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}' and the following list of recommendations:
+[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage', 'hip hop', 'sex', 'Incredible']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop', 'classic', '4 Stars', 'flow']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop', 'Hip-Hop', 'hip hop', 'pop rap']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap', 'kali uchis', 'black metal', 'Hip-Hop']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap', 'soul', 'synth funk', 'tyler the creator']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul', 'west coast hip hop', 'industrial hip hop', 'rap']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance', 'electronic', 'Daft Punk', 'rnb']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap', 'heartless', 'pop', 'r&b']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb', 'MySpotigramBot', 'pop rap', '2007']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar', 'James Blake', 'jay rock', 'Hip-Hop']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played', 'tde', 'jay rock', '-1001819731063']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill', 'rock', 'classic', 'alternative rock']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop', 'kendrick lamar', 'west coast hip hop', '2021']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop', 'west coast', 'colours', 'food and drink']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative', 'rap', 'synthpop', 'west coast']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz', 'pop', 'indie', 'dance']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock', 'indie', 'alternative rock', 'hip hop']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop', 'outkast', 'rap', 'party']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend', 'rock', 'catchy', 'fun']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock', 'power pop', 'vocal', 'pop']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s', 'r&b', '00s', '2004']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb', 'dance', 'canada', 'dance pop']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival', 'Post-punk revival', 'pop', 'alternative rock']}]
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:21:13,963] ERROR - Error querying model
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\main.py", line 32, in handle_query
+    response = await query_ollama(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\ollama_client.py", line 14, in query_ollama
+    response = await client.post(OLLAMA_URL, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-06-25 16:21:38,993] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:21:48,375] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:22:01,991] INFO - Received query: Given the prompt '{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}' and the following list of recommendations:
+[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival']}]
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:23:02,591] ERROR - Error querying model
+Traceback (most recent call last):
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\main.py", line 32, in handle_query
+    response = await query_ollama(query)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Desktop\app\ai-music-recommender\backend\ollama_client.py", line 14, in query_ollama
+    response = await client.post(OLLAMA_URL, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Program Files\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\User\AppData\Roaming\Python\Python311\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+[2025-06-25 16:25:38,305] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:25:47,273] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['Hip-hop', 'Energetic']}
+[2025-06-25 16:26:00,900] INFO - Received query: Given the prompt '{'artist': ['Kendrick Lamar'], 'tags': ['Hip-hop', 'Energetic']}' and the following list of recommendations:
+[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival']}]
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:27:46,740] INFO - Model response:  [
+  {"track": "King's Dead (with Kendrick Lamar, Future & James Blake)", "artist": "Jay Rock"},
+  {"track": "Hood Gone Love It (feat. Kendrick Lamar)", "artist": "Jay Rock"},
+  {"track": "Family Ties (with Kendrick Lamar)", "artist": "Baby Keem"},
+  {"track": "See You Again (feat. Kali Uchis)", "artist": "Tyler, the Creator"},
+  {"track": "Earfquake", "artist": "Tyler, the Creator"},
+  {"track": "NEW MAGIC WAND", "artist": "Tyler, the Creator"},
+  {"track": "Stronger", "artist": "Kanye West"},
+  {"track": "Heartless", "artist": "Kanye West"},
+  {"track": "Flashing Lights", "artist": "Kanye West"},
+  {"track": "Wow Freestyle (feat. Kendrick Lamar)", "artist": "Jay Rock"}
+]
+[2025-06-25 16:30:27,564] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:30:35,433] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop']}
+[2025-06-25 16:30:46,985] INFO - Received query: Given the prompt '{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop']}' and the following list of recommendations:
+[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop']}]
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:32:11,479] INFO - Model response:  [
+    {"track": "King's Dead (with Kendrick Lamar, Future & James Blake)", "artist": "Jay Rock"},
+    {"track": "Hood Gone Love It (feat. Kendrick Lamar)", "artist": "Jay Rock"},
+    {"track": "Family Ties (with Kendrick Lamar)", "artist": "Baby Keem"},
+    {"track": "Wow Freestyle (feat. Kendrick Lamar)", "artist": "Jay Rock"},
+    {"track": "Heartless", "artist": "Kanye West"},
+    {"track": "Flashing Lights", "artist": "Kanye West"},
+    {"track": "Stronger", "artist": "Kanye West"},
+    {"track": "Surround Sound (feat. 21 Savage & Baby Tate)", "artist": "Jid"}
+]
+[2025-06-25 16:47:17,657] INFO - Received query: Given the prompt 'energetic hip-hop like Kendrick Lamar', extract the key information and return it in this exact structured format: {'artist': [artist1, artist2, ...], 'tags': [tag1, tag2, ...]}. If any information is missing, use an empty list. Include any genres you find in the prompt as tags in the 'tags' field. Return only the structure, no additional commentary or explanation.
+[2025-06-25 16:47:28,420] INFO - Model response:  {'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}
+[2025-06-25 16:47:42,118] INFO - Received query: Given the prompt '{'artist': ['Kendrick Lamar'], 'tags': ['hip-hop', 'energetic']}' and the following list of recommendations:
+[{'track': 'Surround Sound (feat. 21 Savage & Baby Tate)', 'artist': 'Jid', 'tags': ['trap', 'Southern Hip Hop', 'MySpotigramBot', 'chipmunk soul', '21 savage']}, {'track': '151 Rum', 'artist': 'Jid', 'tags': ['trap', 'rap', '2010s', 'best of 2018', 'Hip-Hop']}, {'track': 'Dance Now (feat. Kenny Mason)', 'artist': 'Jid', 'tags': ['MySpotigramBot', 'trap', 'Southern Hip Hop', 'rap', 'hardcore hip hop']}, {'track': 'See You Again (feat. Kali Uchis)', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'rap', 'rnb', 'Neo-Soul', 'pop rap']}, {'track': 'Earfquake', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'Neo-Soul', 'alternative rnb', 'alternative', 'rap']}, {'track': 'NEW MAGIC WAND', 'artist': 'Tyler, the Creator', 'tags': ['MySpotigramBot', 'experimental hip hop', 'hardcore hip hop', 'hip hop', 'Neo-Soul']}, {'track': 'Stronger', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'Kanye West', 'rap', 'hip hop', 'dance']}, {'track': 'Heartless', 'artist': 'Kanye West', 'tags': ['Kanye West', 'hip hop', 'Hip-Hop', 'rnb', 'rap']}, {'track': 'Flashing Lights', 'artist': 'Kanye West', 'tags': ['Hip-Hop', 'rap', 'Kanye West', 'hip hop', 'rnb']}, {'track': "King's Dead (with Kendrick Lamar, Future & James Blake)", 'artist': 'Jay Rock', 'tags': ['rap', 'Soundtrack', 'future', 'trap', 'kendrick lamar']}, {'track': 'Wow Freestyle (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['MySpotigramBot', 'Hip-Hop', 'rap', 'kendrick lamar', 'played']}, {'track': 'Hood Gone Love It (feat. Kendrick Lamar)', 'artist': 'Jay Rock', 'tags': ['GTA V', 'kamal kant dewan', 'vir foods limited', 'Hip-Hop', 'chill']}, {'track': 'Family Ties (with Kendrick Lamar)', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'trap', 'rap', 'hardcore hip hop', 'Hip-Hop']}, {'track': 'ORANGE SODA', 'artist': 'Baby Keem', 'tags': ['MySpotigramBot', 'rap', 'trap', 'Baby Keem', 'hip hop']}, {'track': 'HONEST', 'artist': 'Baby Keem', 'tags': ['alternative rnb', 'rnb', 'pop rap', 'pop', 'alternative']}, {'track': 'Feel Good Inc.', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'rock', 'gorillaz']}, {'track': 'Clint Eastwood', 'artist': 'Gorillaz', 'tags': ['alternative', 'electronic', 'Hip-Hop', 'gorillaz', 'rock']}, {'track': 'Hey Ya!', 'artist': 'OutKast', 'tags': ['Hip-Hop', 'funk', 'pop', 'dance', 'hip hop']}, {'track': 'A-Punk', 'artist': 'Vampire Weekend', 'tags': ['indie', 'indie rock', 'alternative', 'indie pop', 'Vampire weekend']}, {'track': "Don't Stop Me Now - Remastered 2011", 'artist': 'Queen', 'tags': ['rock', 'Queen', 'classic rock', 'classic', 'hard rock']}, {'track': 'Yeah! (feat. Lil Jon & Ludacris)', 'artist': 'Usher', 'tags': ['rnb', 'Hip-Hop', 'dance', 'pop', '2000s']}, {'track': 'greedy', 'artist': 'Tate McRae', 'tags': ['pop', 'dance-pop', 'Canadian', 'rnb', 'contemporary rnb']}, {'track': 'Bad Idea Right?', 'artist': 'Olivia Rodrigo', 'tags': ['power pop', 'pop rock', 'rock', 'indie rock', 'garage rock revival']}]
+
+Return the recommendations reordered by relevance to the prompt, removing any irrelevant tracks. Return the final list in plain JSON array format, like this: [('track1', 'artist1'), ('track2', 'artist2'), ...]. Do not include any commentary, explanations, or text outside the JSON array.
+[2025-06-25 16:49:20,856] INFO - Model response:  [
+    {"track": "King's Dead (with Kendrick Lamar, Future & James Blake)", "artist": "Jay Rock"},
+    {"track": "Hood Gone Love It (feat. Kendrick Lamar)", "artist": "Jay Rock"},
+    {"track": "Family Ties (with Kendrick Lamar)", "artist": "Baby Keem"},
+    {"track": "See You Again (feat. Kali Uchis)", "artist": "Tyler, the Creator"},
+    {"track": "Earfquake", "artist": "Tyler, the Creator"},
+    {"track": "New Magic Wand", "artist": "Tyler, the Creator"},
+    {"track": "Surround Sound (feat. 21 Savage & Baby Tate)", "artist": "Jid"}
+  ]
