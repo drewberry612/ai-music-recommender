@@ -3,12 +3,13 @@ import requests
 from dotenv import load_dotenv
 import os
 import time
+import ast
 
 load_dotenv()
 
 SLEEP = 1  # Global sleep duration in seconds
 
-DOMAIN = os.get_env("DOMAIN")
+DOMAIN = os.getenv("DOMAIN")
 API_URL = "http://ws.audioscrobbler.com/2.0/"
 API_KEY = os.getenv("API_KEY")
 PROMPT_ERROR = "Sorry, I couldn't understand your request. Please try phrasing it differently."
@@ -22,6 +23,10 @@ def validate_response(response, expected_type):
     try:
         if response.status_code == 200:
             model_response = response.json()
+            if isinstance(model_response, dict) and "response" in model_response:
+                model_response = model_response["response"]
+            if isinstance(model_response, str):
+                model_response = ast.literal_eval(model_response)
             if expected_type == "dict":
                 if isinstance(model_response, dict) and 'artist' in model_response and 'tags' in model_response:
                     return model_response
@@ -172,7 +177,7 @@ def get_recommended_tracks_by_tag(tag):
     
     return tracks
 
-def get_tags_for_tracks(tracks, max_tags=10):
+def get_tags_for_tracks(tracks, max_tags=5):
     results = []
 
     for track_info in tracks:
@@ -253,16 +258,3 @@ def refine_recommendations(prompt, recommendations):
 def get_metadata():
     return RECOMMENDATION_METADATA
 
-# Extreme example prompt for testing
-# {"artist": ["Radiohead", "Portishead", "Massive Attack"], "tags": ["moody", "experimental", "UK", "1990s", "layered", "Alternative Rock", "Trip-Hop", "Electronica"]}
-
-# {"artist": [], "tags": ["Alternative Rock"]}
-
-# Example recommendations array and empty metadata dictionary
-# example_recommendations = [
-#     {"track": "Karma Police", "artist": "Radiohead", "tags": ["Alternative Rock", "90s"]},
-#     {"track": "Teardrop", "artist": "Massive Attack", "tags": ["Trip-Hop", "Electronica"]},
-#     {"track": "Glory Box", "artist": "Portishead", "tags": ["Trip-Hop", "Moody"]}
-# ]
-# example_metadata = {}
-# return example_recommendations, example_metadata

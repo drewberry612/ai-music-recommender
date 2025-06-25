@@ -1,7 +1,7 @@
 import json
 import time
 import streamlit as st
-from frontend.helper import get_metadata, get_recommendations, refine_recommendations, interpret_prompt
+from frontend.helper import *
 from PIL import Image
 
 # ---- APP CONFIG ----
@@ -96,15 +96,17 @@ if st.session_state.show_recommendations:
 
         status_text.text("Understanding your prompt...")
         parsed_prompt = interpret_prompt(prompt)
-        parsed_prompt = json.loads(prompt) # Testing with direct prompt for simplicity
+        print(f"\nParsed prompt: {parsed_prompt}")
 
         status_text.text("Fetching music data...")
         progress_bar.progress(10)
         recommendations = get_recommendations(parsed_prompt)
+        print(f"\nRecommendations: {recommendations}")
 
-        status_text.text("Finalizing recommendations...")
+        status_text.text("Refining recommendations...")
         progress_bar.progress(50)
-        recommendations = refine_recommendations(recommendations, parsed_prompt)
+        recommendations = refine_recommendations(parsed_prompt, recommendations)
+        print(f"\nRefined recommendations: {recommendations}")
 
         status_text.text("Displaying recommendations now...")
         progress_bar.progress(90)
@@ -113,7 +115,8 @@ if st.session_state.show_recommendations:
 
         end = time.time()
         elapsed = end - start
-        print(f"\n⏱️ Elapsed time: {elapsed/60:.4f} minutes")
+        minutes, seconds = divmod(elapsed, 60)
+        print(f"\n⏱️ Elapsed time: {int(minutes)}m {seconds:.2f}s")
 
         progress_bar.empty()
         status_text.empty()
