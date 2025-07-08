@@ -8,6 +8,8 @@ Wavelength is an AI-powered web app that generates tailored music recommendation
 
 Built with Python, Streamlit, and the Last.fm API, the app interprets your intent and returns relevant songs — not just by genre or mood, but by *vibe*.
 
+🎥 [Check out this demo video]((https://youtu.be/mVVzfWpgauQ)) to see Wavelength in action.
+
 ---
 
 ## ✨ Key Features
