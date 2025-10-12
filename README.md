@@ -41,12 +41,6 @@ Built with Python, Streamlit, and the Last.fm API, the app interprets your inten
 
 ---
 
-## 🟢 Current Status
-
-The app is mostly developed. Model hosting and API deployment are being finalised before public release. Once ready, a live demo will be made available for testing and feedback.
-
----
-
 ## 🏷️ Track Metadata & Tag Collection
 
 Wavelength enriches every recommended track with detailed metadata to enhance the discovery experience. For each track, the app collects information such as album cover images, direct links to the track and artist, duration, and unique identifiers. Additionally, it fetches the most relevant tags for each track—such as genres, moods, and descriptive keywords—by querying Last.fm’s top tags for that track. This metadata not only powers a richer user interface but also enables more nuanced filtering and ranking of recommendations based on your prompt.
